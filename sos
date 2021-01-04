@@ -1,0 +1,105 @@
+
+local ScreenGui = Instance.new("ScreenGui")
+local Container = Instance.new("Frame")
+local TextLabel = Instance.new("TextLabel")
+local TextButton = Instance.new("TextButton")
+local TextButton_2 = Instance.new("TextButton")
+local TextButton_3 = Instance.new("TextButton")
+local TextButton_4 = Instance.new("TextButton")
+local TextButton_5 = Instance.new("TextButton")
+
+
+
+ScreenGui.Parent = game.Players.LocalPlayer:WaitForChild("PlayerGui")
+
+Container.Name = "Container"
+Container.Parent = ScreenGui
+Container.BackgroundColor3 = Color3.fromRGB(45, 45, 45)
+Container.BorderSizePixel = 0
+Container.Position = UDim2.new(0, 0, 0.277683139, 0)
+Container.Size = UDim2.new(0, 510, 0, 260)
+Container.MouseEnter:Connect(function()
+	Container.Draggable = true
+	Container.Active = true
+	Container.Selectable = true
+end)
+Container.MouseLeave:Connect(function()
+	Container.Draggable = false
+	Container.Active = false
+	Container.Selectable = false
+end)
+
+TextLabel.Parent = Container
+TextLabel.BackgroundColor3 = Color3.fromRGB(30, 30, 30)
+TextLabel.BorderColor3 = Color3.fromRGB(30, 30, 30)
+TextLabel.Position = UDim2.new(0, 0, 0.000766988902, 0)
+TextLabel.Size = UDim2.new(0, 510, 0, 31)
+TextLabel.Font = Enum.Font.Ubuntu
+TextLabel.Text = "Deluxe Prison"
+TextLabel.TextColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel.TextSize = 14.000
+
+TextButton.Parent = Container
+TextButton.BackgroundColor3 = Color3.fromRGB(35, 35, 35)
+TextButton.BorderSizePixel = 0
+TextButton.Position = UDim2.new(0.013171494, 0, 0.135400668, 0)
+TextButton.Size = UDim2.new(0, 138, 0, 38)
+TextButton.Font = Enum.Font.Ubuntu
+TextButton.Text = "Teleport to Prison"
+TextButton.TextColor3 = Color3.fromRGB(255, 255, 255)
+TextButton.TextSize = 14.000
+TextButton.MouseButton1Click:Connect(function()
+	game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = game:GetService("Workspace")["Prison_spawn"].Cafeteria.Cafeteria.CFrame
+end)
+
+TextButton_2.Parent = Container
+TextButton_2.BackgroundColor3 = Color3.fromRGB(35, 35, 35)
+TextButton_2.BorderSizePixel = 0
+TextButton_2.Position = UDim2.new(0.363457352, 0, 0.135400683, 0)
+TextButton_2.Size = UDim2.new(0, 136, 0, 38)
+TextButton_2.Font = Enum.Font.Ubuntu
+TextButton_2.Text = "Teleport to Guards"
+TextButton_2.TextColor3 = Color3.fromRGB(255, 255, 255)
+TextButton_2.TextSize = 14.000
+TextButton_2.MouseButton1Click:Connect(function()
+	game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = game:GetService("Workspace")["Prison_guardspawn"].spawn.CFrame
+end)
+
+TextButton_3.Parent = Container
+TextButton_3.BackgroundColor3 = Color3.fromRGB(35, 35, 35)
+TextButton_3.BorderSizePixel = 0
+TextButton_3.Position = UDim2.new(0.704054415, 0, 0.135400653, 0)
+TextButton_3.Size = UDim2.new(0, 130, 0, 38)
+TextButton_3.Font = Enum.Font.Ubuntu
+TextButton_3.Text = "Teleport to Criminal"
+TextButton_3.TextColor3 = Color3.fromRGB(255, 255, 255)
+TextButton_3.TextSize = 14.000
+TextButton_3.MouseButton1Click:Connect(function()
+	game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = game:GetService("Workspace")["Criminals Spawn"].SpawnLocation.CFrame
+end)
+
+TextButton_4.Parent = Container
+TextButton_4.BackgroundColor3 = Color3.fromRGB(35, 35, 35)
+TextButton_4.BorderSizePixel = 0
+TextButton_4.Position = UDim2.new(0.0131715061, 0, 0.427708328, 0)
+TextButton_4.Size = UDim2.new(0, 159, 0, 38)
+TextButton_4.Font = Enum.Font.Ubuntu
+TextButton_4.Text = "Teleport Remington 870"
+TextButton_4.TextColor3 = Color3.fromRGB(255, 255, 255)
+TextButton_4.TextSize = 14.000
+TextButton_4.MouseButton1Click:Connect(function()
+	game:GetService("Workspace")["Prison_ITEMS"].giver["Remington 870"].ITEMPICKUP.CFrame = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame
+end)
+
+TextButton_5.Parent = Container
+TextButton_5.BackgroundColor3 = Color3.fromRGB(35, 35, 35)
+TextButton_5.BorderSizePixel = 0
+TextButton_5.Position = UDim2.new(0.364151895, 0, 0.427708328, 0)
+TextButton_5.Size = UDim2.new(0, 138, 0, 38)
+TextButton_5.Font = Enum.Font.Ubuntu
+TextButton_5.Text = "Teleport AK47 to YOU"
+TextButton_5.TextColor3 = Color3.fromRGB(255, 255, 255)
+TextButton_5.TextSize = 14.000
+TextButton_5.MouseButton1Click:Connect(function()
+	game.Workspace.Prison_ITEMS.giver["AK-47"].ITEMPICKUP.CFrame = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame
+end)
